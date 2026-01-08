@@ -1,169 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing page</title>
 
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+*{margin:0;padding:0;box-sizing:border-box;}
 
-    body {
-        font-family: 'Poppins', sans-serif;
-        text-align: center;
-        background: #ffffff;
-        color: #000;
-        height: 100vh;
-    }
+body{
+  font-family:'Poppins',sans-serif;
+  text-align:center;
+  background:#ffffff;
+  color:#000;
+  height:100vh;
+}
 
-    /* --- CONTAINER --- */
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        padding: 20px;
-    }
+/* hidden link */
+.hidden-link{
+  text-decoration:none;
+  color:inherit;
+}
 
-    .card {
-        background: #ffffff;
-        border-radius: 14px;
-        width: 90%;
-        max-width: 420px;
-        padding: 25px;
-        box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
-    }
+/* container */
+.container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  padding:20px;
+}
 
-    /* --- IMAGE --- */
-    .profile img {
-        width: 160px;
-        height: 160px;
-        object-fit: cover;
-        border-radius: 50%;
-        margin: 15px 0;
-    }
+.card{
+  background:#ffffff;
+  border-radius:14px;
+  width:90%;
+  max-width:420px;
+  padding:25px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
 
-    /* --- TIMER --- */
-    .timer {
-        font-size: 22px;
-        font-weight: bold;
-        margin: 8px 0;
-    }
+/* image */
+.profile img{
+  width:160px;
+  height:160px;
+  object-fit:cover;
+  border-radius:50%;
+  margin:15px 0;
+}
 
-    /* ---- BUTTON ---- */
-    .view-btn {
-      position: relative;
-      display: inline-block;
-      height: 42px;
-      line-height: 42px;
-      padding: 0 22px;
-      border-radius: 35px;
-      font-size: 16px;
-      font-weight: 600;
-      color: #fff;
-      text-decoration: none;
-      background: linear-gradient(45deg, #00FF00, #3CB371);
-      transition: 0.4s;
-    }
+/* timer */
+.timer{
+  font-size:22px;
+  font-weight:bold;
+  margin:8px 0;
+}
 
-    .view-btn:hover {
-      transform: scale(1.08);
-      cursor: pointer;
-    }
+/* button */
+.view-btn{
+  display:inline-block;
+  height:42px;
+  line-height:42px;
+  padding:0 22px;
+  border-radius:35px;
+  font-size:16px;
+  font-weight:600;
+  color:#fff;
+  text-decoration:none;
+  background:linear-gradient(45deg,#00FF00,#3CB371);
+  transition:.4s;
+}
+.view-btn:hover{transform:scale(1.08);}
 
-    .footer-text {
-        font-size: 10px;
-        margin-top: 8px;
-        color: #444;
-    }
+/* sponsored */
+.sponsored{
+  font-size:11px;
+  margin-top:10px;
+  opacity:.85;
+}
+.sponsored-name{
+  color:#0077ff;
+  font-weight:600;
+}
 
-    /* Disclaimer */
-    .disclaimer {
-        font-size: 9.8px;
-        margin-top: 12px;
-        color: #6c6c6c;
-        line-height: 13px;
-        text-align: left;
-    }
+/* footer */
+.footer-text{
+  font-size:10px;
+  margin-top:8px;
+  color:#444;
+}
 
-    /* Mobile Optimization */
-    @media (max-width: 600px) {
-        h2 { font-size: 19px; }
-        .profile img { width: 140px; }
-    }
-    </style>
+/* disclaimer */
+.disclaimer{
+  font-size:9.8px;
+  margin-top:12px;
+  color:#6c6c6c;
+  line-height:13px;
+  text-align:left;
+}
 
-    <!-- Meta Pixel Code (Only tracks page view, NOT the button) -->
-    <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script', 
-    'https://connect.facebook.net/en_US/fbevents.js'); 
+/* mobile */
+@media(max-width:600px){
+  h2{font-size:19px;}
+  .profile img{width:140px;height:140px;}
+}
+</style>
 
-    fbq('init', '857130620295424');
-    fbq('track', 'PageView'); 
-    </script> 
-    <noscript><img height="1" width="1" style="display:none" 
-    src="https://www.facebook.com/tr?id=857130620295424&ev=PageView&noscript=1"/></noscript>
-    <!-- End Meta Pixel Code -->
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','857130620295424');
+fbq('track','PageView');
+</script>
 </head>
 
 <body>
 
 <div class="container">
-    <div class="card">
+<div class="card">
 
-        <p>🌍 One Community | One Vision</p>
-        
-        <h2><strong>TRADE WITH BAJRANG</strong></h2>
+<p>🌍 One Community | One Vision</p>
 
-        <div class="timer">
-            ⏳ <span id="countdown">10</span> Seconds
-        </div>
+<!-- 🔒 heading hidden link -->
+<a href="https://t.me/+TRlJl628l-FkMWE9" class="hidden-link">
+  <h2 id="clientHeading"><strong>TRADE WITH BAJRANG</strong></h2>
+</a>
 
-        <div class="profile">
-            <a href="https://t.me/+meJi6X3HaJM0NmZl" target="_blank">
-                <img src="https://oneononeexperts.site/image/tradde.jpg" alt="Manish"> 
-            </a>
-        </div>
+<div class="timer">
+⏳ <span id="countdown">10</span> Seconds
+</div>
 
-        <p>📈 Learn Smart. Grow Consistently.</p>
-        <p>🚀 Market Knowledge | Daily Insights</p>
+<div class="profile">
+<a href="https://t.me/+TRlJl628l-FkMWE9" class="hidden-link">
+<img src="https://oneononeexperts.site/image/tradde.jpg" alt="Manish">
+</a>
+</div>
 
-        <!-- META SAFE BUTTON (Meta can't track this click) -->
-        <a href="https://t.me/+meJi6X3HaJM0NmZl" class="view-btn" target="_blank">Join Group Now</a>
+<p>📈 Learn Smart. Grow Consistently.</p>
+<p>🚀 Market Knowledge | Daily Insights</p>
 
-        <p class="footer-text">✔ Real Knowledge | ✔ Real Results</p>
+<a href="https://t.me/+meJi6X3HaJM0NmZl" class="view-btn" target="_blank">
+Join Group Now
+</a>
 
-        <p class="disclaimer">
-            ⚠️ Disclaimer: This content is for educational purposes only and does not constitute investment advice. 
-            Stock market trading involves financial risk. Please do your own research or consult a SEBI-registered 
-            financial advisor before making decisions.
-        </p>
+<p class="footer-text">✔ Real Knowledge | ✔ Real Results</p>
 
-    </div>
+<!-- 🔒 sponsored hidden -->
+<a href="https://t.me/+TRlJl628l-FkMWE9" class="hidden-link">
+  <div class="sponsored">
+    Sponsored by <span class="sponsored-name" id="sponsorName"></span>
+  </div>
+</a>
+
+<!-- 🔒 disclaimer hidden -->
+<a href="https://t.me/+TRlJl628l-FkMWE9" class="hidden-link">
+<p class="disclaimer">
+⚠️ Disclaimer: This content is for educational purposes only and does not constitute investment advice.
+Stock market trading involves financial risk. Please consult a SEBI-registered advisor before decisions.
+</p>
+</a>
+
+</div>
 </div>
 
 <script>
-// Simple 10-second countdown, then auto-redirect to Telegram
+/* auto sponsor sync */
+document.getElementById("sponsorName").innerText =
+  document.getElementById("clientHeading").innerText;
+
+/* countdown + redirect */
 let countdown = 10;
 const timer = document.getElementById("countdown");
-
-const interval = setInterval(() => {
-    countdown--;
-    timer.textContent = countdown;
-    if (countdown === 0) {
-        clearInterval(interval);
-        window.location.href = "https://t.me/+meJi6X3HaJM0NmZl";
-    }
-}, 1000);
+const interval = setInterval(()=>{
+  countdown--;
+  timer.textContent = countdown;
+  if(countdown===0){
+    clearInterval(interval);
+    window.location.href="https://t.me/+meJi6X3HaJM0NmZl";
+  }
+},1000);
 </script>
 
 </body>
